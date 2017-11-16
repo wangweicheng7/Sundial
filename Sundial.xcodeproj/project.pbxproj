@@ -23,6 +23,7 @@
 		BC6B631F1FBB0DF9002AD625 /* NSBezierPath+quartz.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */; };
 		BC6B63251FBB2EB3002AD625 /* DialView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B630C1FBAA5E0002AD625 /* DialView.m */; };
 		BC6B632B1FBB4E3E002AD625 /* Sundial.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62EE1FB9C2D7002AD625 /* Sundial.m */; };
+		BC8486221FBD65EF0023ED62 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8486211FBD65EF0023ED62 /* example.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+quartz.m"; sourceTree = "<group>"; };
 		BC6B63171FBB0994002AD625 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
 		BC6B63191FBB09BE002AD625 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		BC8486211FBD65EF0023ED62 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		BC6B62F81FBA94E0002AD625 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				BC8486211FBD65EF0023ED62 /* example.png */,
 				BC6B62F91FBA94E0002AD625 /* AppDelegate.h */,
 				BC6B62FA1FBA94E0002AD625 /* AppDelegate.m */,
 				BC6B62FC1FBA94E0002AD625 /* ViewController.h */,
@@ -239,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8486221FBD65EF0023ED62 /* example.png in Resources */,
 				BC6B63001FBA94E0002AD625 /* Assets.xcassets in Resources */,
 				BC6B63031FBA94E0002AD625 /* Main.storyboard in Resources */,
 			);
