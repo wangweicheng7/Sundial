@@ -7,19 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC6B62B11FB9BFD5002AD625 /* ClockView.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6B62B01FB9BFD5002AD625 /* ClockView.h */; };
-		BC6B62B31FB9BFD5002AD625 /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62B21FB9BFD5002AD625 /* ClockView.m */; };
+		BC6B62F01FB9C2D7002AD625 /* Clock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62EE1FB9C2D7002AD625 /* Clock.m */; };
+		BC6B62FB1FBA94E0002AD625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62FA1FBA94E0002AD625 /* AppDelegate.m */; };
+		BC6B62FE1FBA94E0002AD625 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62FD1FBA94E0002AD625 /* ViewController.m */; };
+		BC6B63001FBA94E0002AD625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC6B62FF1FBA94E0002AD625 /* Assets.xcassets */; };
+		BC6B63031FBA94E0002AD625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6B63011FBA94E0002AD625 /* Main.storyboard */; };
+		BC6B63061FBA94E0002AD625 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B63051FBA94E0002AD625 /* main.m */; };
+		BC6B630D1FBAA5E0002AD625 /* DialView.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6B630B1FBAA5E0002AD625 /* DialView.h */; };
+		BC6B630E1FBAA5E0002AD625 /* DialView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B630C1FBAA5E0002AD625 /* DialView.m */; };
+		BC6B63141FBAF302002AD625 /* NSBezierPath+quartz.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6B63121FBAF302002AD625 /* NSBezierPath+quartz.h */; };
+		BC6B63151FBAF302002AD625 /* NSBezierPath+quartz.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */; };
+		BC6B63181FBB099D002AD625 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6B63171FBB0994002AD625 /* ScreenSaver.framework */; };
+		BC6B631A1FBB09C1002AD625 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6B63191FBB09BE002AD625 /* Quartz.framework */; };
+		BC6B631D1FBB0B61002AD625 /* Clock.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6B62ED1FB9C2D7002AD625 /* Clock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC6B631F1FBB0DF9002AD625 /* NSBezierPath+quartz.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */; };
+		BC6B63251FBB2EB3002AD625 /* DialView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B630C1FBAA5E0002AD625 /* DialView.m */; };
+		BC6B632B1FBB4E3E002AD625 /* Clock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62EE1FB9C2D7002AD625 /* Clock.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC6B631B1FBB0A21002AD625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC6B62A41FB9BFD5002AD625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC6B62AC1FB9BFD5002AD625;
+			remoteInfo = Clock;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BC6B62AD1FB9BFD5002AD625 /* Clock.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clock.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC6B62B01FB9BFD5002AD625 /* ClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
-		BC6B62B21FB9BFD5002AD625 /* ClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
 		BC6B62B41FB9BFD5002AD625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6B62ED1FB9C2D7002AD625 /* Clock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clock.h; sourceTree = "<group>"; };
+		BC6B62EE1FB9C2D7002AD625 /* Clock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clock.m; sourceTree = "<group>"; };
+		BC6B62F71FBA94E0002AD625 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6B62F91FBA94E0002AD625 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC6B62FA1FBA94E0002AD625 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC6B62FC1FBA94E0002AD625 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC6B62FD1FBA94E0002AD625 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC6B62FF1FBA94E0002AD625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC6B63021FBA94E0002AD625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC6B63041FBA94E0002AD625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6B63051FBA94E0002AD625 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC6B63071FBA94E0002AD625 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
+		BC6B630B1FBAA5E0002AD625 /* DialView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialView.h; sourceTree = "<group>"; };
+		BC6B630C1FBAA5E0002AD625 /* DialView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialView.m; sourceTree = "<group>"; };
+		BC6B63121FBAF302002AD625 /* NSBezierPath+quartz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+quartz.h"; sourceTree = "<group>"; };
+		BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+quartz.m"; sourceTree = "<group>"; };
+		BC6B63171FBB0994002AD625 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		BC6B63191FBB09BE002AD625 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC6B62A91FB9BFD5002AD625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6B63181FBB099D002AD625 /* ScreenSaver.framework in Frameworks */,
+				BC6B631A1FBB09C1002AD625 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC6B62F41FBA94E0002AD625 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,7 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				BC6B62AF1FB9BFD5002AD625 /* Clock */,
+				BC6B62F81FBA94E0002AD625 /* Example */,
 				BC6B62AE1FB9BFD5002AD625 /* Products */,
+				BC6B63161FBB0994002AD625 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6B62AD1FB9BFD5002AD625 /* Clock.saver */,
+				BC6B62F71FBA94E0002AD625 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,11 +100,40 @@
 		BC6B62AF1FB9BFD5002AD625 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
-				BC6B62B01FB9BFD5002AD625 /* ClockView.h */,
-				BC6B62B21FB9BFD5002AD625 /* ClockView.m */,
+				BC6B62ED1FB9C2D7002AD625 /* Clock.h */,
+				BC6B62EE1FB9C2D7002AD625 /* Clock.m */,
 				BC6B62B41FB9BFD5002AD625 /* Info.plist */,
+				BC6B630B1FBAA5E0002AD625 /* DialView.h */,
+				BC6B630C1FBAA5E0002AD625 /* DialView.m */,
+				BC6B63121FBAF302002AD625 /* NSBezierPath+quartz.h */,
+				BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */,
 			);
 			path = Clock;
+			sourceTree = "<group>";
+		};
+		BC6B62F81FBA94E0002AD625 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				BC6B62F91FBA94E0002AD625 /* AppDelegate.h */,
+				BC6B62FA1FBA94E0002AD625 /* AppDelegate.m */,
+				BC6B62FC1FBA94E0002AD625 /* ViewController.h */,
+				BC6B62FD1FBA94E0002AD625 /* ViewController.m */,
+				BC6B62FF1FBA94E0002AD625 /* Assets.xcassets */,
+				BC6B63011FBA94E0002AD625 /* Main.storyboard */,
+				BC6B63041FBA94E0002AD625 /* Info.plist */,
+				BC6B63051FBA94E0002AD625 /* main.m */,
+				BC6B63071FBA94E0002AD625 /* Example.entitlements */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		BC6B63161FBB0994002AD625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC6B63191FBB09BE002AD625 /* Quartz.framework */,
+				BC6B63171FBB0994002AD625 /* ScreenSaver.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -62,7 +143,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6B62B11FB9BFD5002AD625 /* ClockView.h in Headers */,
+				BC6B631D1FBB0B61002AD625 /* Clock.h in Headers */,
+				BC6B63141FBAF302002AD625 /* NSBezierPath+quartz.h in Headers */,
+				BC6B630D1FBAA5E0002AD625 /* DialView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +160,7 @@
 				BC6B62A91FB9BFD5002AD625 /* Frameworks */,
 				BC6B62AA1FB9BFD5002AD625 /* Headers */,
 				BC6B62AB1FB9BFD5002AD625 /* Resources */,
+				BC6B630F1FBAADD6002AD625 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -86,6 +170,24 @@
 			productName = Clock;
 			productReference = BC6B62AD1FB9BFD5002AD625 /* Clock.saver */;
 			productType = "com.apple.product-type.bundle";
+		};
+		BC6B62F61FBA94E0002AD625 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC6B63081FBA94E0002AD625 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				BC6B62F31FBA94E0002AD625 /* Sources */,
+				BC6B62F41FBA94E0002AD625 /* Frameworks */,
+				BC6B62F51FBA94E0002AD625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC6B631C1FBB0A21002AD625 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = BC6B62F71FBA94E0002AD625 /* Example.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +202,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					BC6B62F61FBA94E0002AD625 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = BC6B62A71FB9BFD5002AD625 /* Build configuration list for PBXProject "Clock" */;
@@ -108,6 +214,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = BC6B62A31FB9BFD5002AD625;
 			productRefGroup = BC6B62AE1FB9BFD5002AD625 /* Products */;
@@ -115,6 +222,7 @@
 			projectRoot = "";
 			targets = (
 				BC6B62AC1FB9BFD5002AD625 /* Clock */,
+				BC6B62F61FBA94E0002AD625 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -127,18 +235,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC6B62F51FBA94E0002AD625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6B63001FBA94E0002AD625 /* Assets.xcassets in Resources */,
+				BC6B63031FBA94E0002AD625 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC6B630F1FBAADD6002AD625 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCREEN_SAVER_PATH=\"${HOME}/Library/Screen Savers/${FULL_PRODUCT_NAME}\"\necho SCREEN_SAVER_PATH\nif [[ -d \"${SCREEN_SAVER_PATH}\" || -f \"${SCREEN_SAVER_PATH}\" || -L \"${SCREEN_SAVER_PATH}\" ]]; then\nrm -rf \"${SCREEN_SAVER_PATH}\"\nfi\nln -s \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" \"${SCREEN_SAVER_PATH}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC6B62A81FB9BFD5002AD625 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6B62B31FB9BFD5002AD625 /* ClockView.m in Sources */,
+				BC6B62F01FB9C2D7002AD625 /* Clock.m in Sources */,
+				BC6B63151FBAF302002AD625 /* NSBezierPath+quartz.m in Sources */,
+				BC6B630E1FBAA5E0002AD625 /* DialView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC6B62F31FBA94E0002AD625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6B632B1FBB4E3E002AD625 /* Clock.m in Sources */,
+				BC6B63251FBB2EB3002AD625 /* DialView.m in Sources */,
+				BC6B631F1FBB0DF9002AD625 /* NSBezierPath+quartz.m in Sources */,
+				BC6B62FE1FBA94E0002AD625 /* ViewController.m in Sources */,
+				BC6B63061FBA94E0002AD625 /* main.m in Sources */,
+				BC6B62FB1FBA94E0002AD625 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC6B631C1FBB0A21002AD625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC6B62AC1FB9BFD5002AD625 /* Clock */;
+			targetProxy = BC6B631B1FBB0A21002AD625 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC6B63011FBA94E0002AD625 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC6B63021FBA94E0002AD625 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BC6B62B51FB9BFD5002AD625 /* Debug */ = {
@@ -189,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -238,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -247,10 +414,13 @@
 		BC6B62B81FB9BFD5002AD625 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Clock/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = PW.Clock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = saver;
@@ -260,13 +430,45 @@
 		BC6B62B91FB9BFD5002AD625 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Clock/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = PW.Clock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		BC6B63091FBA94E0002AD625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PW.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC6B630A1FBA94E0002AD625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PW.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -287,6 +489,15 @@
 			buildConfigurations = (
 				BC6B62B81FB9BFD5002AD625 /* Debug */,
 				BC6B62B91FB9BFD5002AD625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC6B63081FBA94E0002AD625 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC6B63091FBA94E0002AD625 /* Debug */,
+				BC6B630A1FBA94E0002AD625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
