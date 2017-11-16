@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Clock.xcscheme</key>
+		<key>Example.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Example.xcscheme</key>
+		<key>Sundial.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
