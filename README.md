@@ -20,4 +20,4 @@ Or
 
 ## E.g
 
-![](https://github.com/wangweicheng7/Sundial/tree/master/Example/example.png)
+![](./Example/example.png)
