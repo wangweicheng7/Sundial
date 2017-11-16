@@ -1,20 +1,17 @@
 //
-//  WebSaverView.m
-//  WebSaver
+//  Sundial.h
+//  Sundial
 //
-//  Created by Thomas Robinson on 10/13/09.
-//  Modified by Pekka Nikander in May 2012.
-//  Copyright (c) 2013, Thomas Robinson. All rights reserved.
-//  Copyright (c) 2012, Senseg.  All rights reserved.
+//  Created by wangweicheng on 2017/11/14.
+//  Copyright © 2017年 wangweicheng. All rights reserved.
 //
 
-#import "Clock.h"
+#import "Sundial.h"
 #import "DialView.h"
 #import <Quartz/Quartz.h>
 #import "NSBezierPath+quartz.h"
-//#import "TaiChiView.h"
 
-@interface Clock ()
+@interface Sundial ()
 {
     CGFloat _rotation;
     float _rate;
@@ -34,7 +31,7 @@
 
 @end
 
-@implementation Clock
+@implementation Sundial
 
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview {
     if(self = [super initWithFrame:frame isPreview:isPreview]) {

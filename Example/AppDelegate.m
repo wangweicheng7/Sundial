@@ -16,7 +16,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-//    Clock *clock = [[Clock alloc] initWithFrame:window isPreview:YES];
+//    Sundial *Sundial = [[Sundial alloc] initWithFrame:window isPreview:YES];
 }
 
 

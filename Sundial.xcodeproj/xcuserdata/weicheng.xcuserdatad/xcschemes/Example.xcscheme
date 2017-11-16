@@ -17,7 +17,7 @@
                BlueprintIdentifier = "BC6B62F61FBA94E0002AD625"
                BuildableName = "Example.app"
                BlueprintName = "Example"
-               ReferencedContainer = "container:Clock.xcodeproj">
+               ReferencedContainer = "container:Sundial.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
             BlueprintIdentifier = "BC6B62F61FBA94E0002AD625"
             BuildableName = "Example.app"
             BlueprintName = "Example"
-            ReferencedContainer = "container:Clock.xcodeproj">
+            ReferencedContainer = "container:Sundial.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -60,7 +60,7 @@
             BlueprintIdentifier = "BC6B62F61FBA94E0002AD625"
             BuildableName = "Example.app"
             BlueprintName = "Example"
-            ReferencedContainer = "container:Clock.xcodeproj">
+            ReferencedContainer = "container:Sundial.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,7 +79,7 @@
             BlueprintIdentifier = "BC6B62F61FBA94E0002AD625"
             BuildableName = "Example.app"
             BlueprintName = "Example"
-            ReferencedContainer = "container:Clock.xcodeproj">
+            ReferencedContainer = "container:Sundial.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

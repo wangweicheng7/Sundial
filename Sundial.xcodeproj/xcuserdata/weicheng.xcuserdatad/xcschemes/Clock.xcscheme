@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC6B62AC1FB9BFD5002AD625"
-               BuildableName = "Clock.saver"
-               BlueprintName = "Clock"
-               ReferencedContainer = "container:Clock.xcodeproj">
+               BuildableName = "Sundial.saver"
+               BlueprintName = "Sundial"
+               ReferencedContainer = "container:Sundial.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC6B62AC1FB9BFD5002AD625"
-            BuildableName = "Clock.saver"
-            BlueprintName = "Clock"
-            ReferencedContainer = "container:Clock.xcodeproj">
+            BuildableName = "Sundial.saver"
+            BlueprintName = "Sundial"
+            ReferencedContainer = "container:Sundial.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC6B62AC1FB9BFD5002AD625"
-            BuildableName = "Clock.saver"
-            BlueprintName = "Clock"
-            ReferencedContainer = "container:Clock.xcodeproj">
+            BuildableName = "Sundial.saver"
+            BlueprintName = "Sundial"
+            ReferencedContainer = "container:Sundial.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

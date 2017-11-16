@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "Clock.h"
+#import "Sundial.h"
 
 @interface ViewController()
 
-@property (nonatomic, strong) Clock *clock;
+@property (nonatomic, strong) Sundial *Sundial;
 
 @end
 
@@ -20,10 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.clock = [[Clock alloc] initWithFrame:self.view.bounds isPreview:YES];
-    [self.clock setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable];
-    [self.view addSubview:self.clock];
-    [self.clock startAnimation];
+    self.Sundial = [[Sundial alloc] initWithFrame:self.view.bounds isPreview:YES];
+    [self.Sundial setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable];
+    [self.view addSubview:self.Sundial];
+    [self.Sundial startAnimation];
     
 }
 
