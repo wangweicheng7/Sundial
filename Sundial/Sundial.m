@@ -10,6 +10,7 @@
 #import "DialView.h"
 #import <Quartz/Quartz.h>
 #import "NSBezierPath+quartz.h"
+#import "Preferences.h"
 
 @interface Sundial ()
 {
@@ -78,18 +79,17 @@
 }
 
 - (BOOL)hasConfigureSheet {
-    return NO;
+    return YES;
 }
 
 - (NSWindow *)configureSheet {
-    return nil;
+    return [[[Preferences alloc] init] window];
 }
 
 - (void)animateOneFrame {
     [super animateOneFrame];
 
     _rotation += 1;
-//    [self.dialView setNeedsDisplay:YES];
     
     [self.hourDialView setNeedsLayout:YES];
     [self.quarterDialView setNeedsLayout:YES];
