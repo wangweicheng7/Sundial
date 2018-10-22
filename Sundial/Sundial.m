@@ -54,9 +54,29 @@
         
         [self setAnimationTimeInterval:0.01];
 //        [self addSubview:self.taiChiView];
-        
+                
     }
     return self;
+}
+
+- (void)exchange {
+    
+    NSPoint point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
+    _hourDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-100*_rate center:point minRadius:self.bounds.size.height/2-160*_rate];
+    _hourDialView.frameCenterRotation = 75;
+    
+    [self addSubview:self.hourDialView];
+    
+    point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
+    _quarterDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-50*_rate center:point minRadius:self.bounds.size.height/2-100*_rate];
+    
+    [self addSubview:self.quarterDialView];
+    
+    point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
+    _secondDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-30*_rate center:point minRadius:self.bounds.size.height/2-50*_rate];
+    [self addSubview:self.secondDialView];
+    
+    
 }
 
 - (void)startAnimation {
@@ -167,7 +187,7 @@
 - (DialView *)hourDialView {
     if (!_hourDialView) {
         
-        NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
+        NSPoint point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
         _hourDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-100*_rate center:point minRadius:self.bounds.size.height/2-160*_rate];
         _hourDialView.frameCenterRotation = 75;
     }
@@ -176,7 +196,7 @@
 
 - (DialView *)quarterDialView {
     if (!_quarterDialView) {
-        NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
+        NSPoint point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
         _quarterDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-50*_rate center:point minRadius:self.bounds.size.height/2-100*_rate];
     }
     return _quarterDialView;
@@ -185,7 +205,7 @@
 - (DialView *)secondDialView {
     if (!_secondDialView) {
         
-        NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
+        NSPoint point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
         _secondDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-30*_rate center:point minRadius:self.bounds.size.height/2-50*_rate];
     }
     return _secondDialView;

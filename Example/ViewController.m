@@ -20,8 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGRect frame = CGRectMake(self.view.bounds.size.width - self.view.bounds.size.height/2, 0, self.view.bounds.size.height, self.view.bounds.size.height);
-    self.Sundial = [[Sundial alloc] initWithFrame:frame isPreview:YES];
+//    CGRect frame = CGRectMake(self.view.bounds.size.width - self.view.bounds.size.height/2, 0, self.view.bounds.size.height, self.view.bounds.size.height);
+//    self.Sundial = [[Sundial alloc] initWithFrame:frame isPreview:YES];
+    self.Sundial = [[Sundial alloc] initWithFrame:self.view.bounds isPreview:YES];
     [self.Sundial setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable];
     [self.view addSubview:self.Sundial];
     [self.Sundial startAnimation];
