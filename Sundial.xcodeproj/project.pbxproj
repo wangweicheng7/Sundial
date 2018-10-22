@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC12C1F81FC3E44E00F37B76 /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = BC12C1F51FC3E44E00F37B76 /* Preferences.h */; };
+		BC12C1F91FC3E44E00F37B76 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BC12C1F61FC3E44E00F37B76 /* Preferences.m */; };
+		BC12C1FA1FC3E44E00F37B76 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC12C1F71FC3E44E00F37B76 /* Preferences.xib */; };
+		BC12C1FB1FC3E46D00F37B76 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BC12C1F61FC3E44E00F37B76 /* Preferences.m */; };
+		BC12C1FC1FC3E47000F37B76 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC12C1F71FC3E44E00F37B76 /* Preferences.xib */; };
 		BC6B62F01FB9C2D7002AD625 /* Sundial.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62EE1FB9C2D7002AD625 /* Sundial.m */; };
 		BC6B62FB1FBA94E0002AD625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62FA1FBA94E0002AD625 /* AppDelegate.m */; };
 		BC6B62FE1FBA94E0002AD625 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62FD1FBA94E0002AD625 /* ViewController.m */; };
@@ -37,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC12C1F51FC3E44E00F37B76 /* Preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		BC12C1F61FC3E44E00F37B76 /* Preferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		BC12C1F71FC3E44E00F37B76 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		BC6B62AD1FB9BFD5002AD625 /* Sundial.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sundial.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6B62B41FB9BFD5002AD625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6B62ED1FB9C2D7002AD625 /* Sundial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sundial.h; sourceTree = "<group>"; };
@@ -109,6 +117,9 @@
 				BC6B630C1FBAA5E0002AD625 /* DialView.m */,
 				BC6B63121FBAF302002AD625 /* NSBezierPath+quartz.h */,
 				BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */,
+				BC12C1F51FC3E44E00F37B76 /* Preferences.h */,
+				BC12C1F61FC3E44E00F37B76 /* Preferences.m */,
+				BC12C1F71FC3E44E00F37B76 /* Preferences.xib */,
 			);
 			path = Sundial;
 			sourceTree = "<group>";
@@ -147,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC6B631D1FBB0B61002AD625 /* Sundial.h in Headers */,
+				BC12C1F81FC3E44E00F37B76 /* Preferences.h in Headers */,
 				BC6B63141FBAF302002AD625 /* NSBezierPath+quartz.h in Headers */,
 				BC6B630D1FBAA5E0002AD625 /* DialView.h in Headers */,
 			);
@@ -235,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC12C1FA1FC3E44E00F37B76 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +257,7 @@
 			files = (
 				BC8486221FBD65EF0023ED62 /* example.png in Resources */,
 				BC6B63001FBA94E0002AD625 /* Assets.xcassets in Resources */,
+				BC12C1FC1FC3E47000F37B76 /* Preferences.xib in Resources */,
 				BC6B63031FBA94E0002AD625 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +287,7 @@
 			files = (
 				BC6B62F01FB9C2D7002AD625 /* Sundial.m in Sources */,
 				BC6B63151FBAF302002AD625 /* NSBezierPath+quartz.m in Sources */,
+				BC12C1F91FC3E44E00F37B76 /* Preferences.m in Sources */,
 				BC6B630E1FBAA5E0002AD625 /* DialView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +299,7 @@
 				BC6B632B1FBB4E3E002AD625 /* Sundial.m in Sources */,
 				BC6B63251FBB2EB3002AD625 /* DialView.m in Sources */,
 				BC6B631F1FBB0DF9002AD625 /* NSBezierPath+quartz.m in Sources */,
+				BC12C1FB1FC3E46D00F37B76 /* Preferences.m in Sources */,
 				BC6B62FE1FBA94E0002AD625 /* ViewController.m in Sources */,
 				BC6B63061FBA94E0002AD625 /* main.m in Sources */,
 				BC6B62FB1FBA94E0002AD625 /* AppDelegate.m in Sources */,
@@ -419,14 +435,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3B89Q3LKCK;
 				INFOPLIST_FILE = Sundial/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sundial.pw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -435,13 +454,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3B89Q3LKCK;
 				INFOPLIST_FILE = Sundial/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sundial.pw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;

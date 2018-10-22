@@ -10,6 +10,7 @@
 #import "DialView.h"
 #import <Quartz/Quartz.h>
 #import "NSBezierPath+quartz.h"
+#import "Preferences.h"
 
 @interface Sundial ()
 {
@@ -39,11 +40,31 @@
         _rotation = 0;
         
         _rate = (frame.size.height)/([NSScreen mainScreen].visibleFrame.size.height);
-        [self setAnimationTimeInterval:0.5];
+        [self setAnimationTimeInterval:0.25];
 //        [self addSubview:self.taiChiView];
-        
+                
     }
     return self;
+}
+
+- (void)exchange {
+    
+    NSPoint point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
+    _hourDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-100*_rate center:point minRadius:self.bounds.size.height/2-160*_rate];
+    _hourDialView.frameCenterRotation = 75;
+    
+    [self addSubview:self.hourDialView];
+    
+    point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
+    _quarterDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-50*_rate center:point minRadius:self.bounds.size.height/2-100*_rate];
+    
+    [self addSubview:self.quarterDialView];
+    
+    point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
+    _secondDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-30*_rate center:point minRadius:self.bounds.size.height/2-50*_rate];
+    [self addSubview:self.secondDialView];
+    
+    
 }
 
 - (void)startAnimation {
@@ -63,43 +84,27 @@
 }
 
 - (BOOL)hasConfigureSheet {
-    return NO;
+    return YES;
 }
 
 - (NSWindow *)configureSheet {
-    return nil;
+    return [[[Preferences alloc] init] window];
 }
 
 - (void)animateOneFrame {
     [super animateOneFrame];
     
-    if (!self.textField.superview) {
-        [self addSubview:self.textField];
-        
-        
-    }else if (!self.hourDialView.superview) {
+    if (!self.hourDialView.superview) {
         [self addSubview:self.hourDialView];
-//        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-//        [dict setObject:self.hourDialView forKey:NSViewAnimationTargetKey];
-//        NSRect viewZeroSize = [self.hourDialView frame];
-//        viewZeroSize.size.width = 0;
-//        viewZeroSize.size.height = 0;
-//        [dict setObject:[NSValue valueWithRect:viewZeroSize] forKey:NSViewAnimationEndFrameKey];
-//        [dict setObject:NSViewAnimationFadeInEffect forKey:NSViewAnimationEffectKey];
-//        NSViewAnimation *anim = [[NSViewAnimation alloc] initWithViewAnimations:@[dict]];
-//        anim.duration = 0.25;
-//        anim.animationCurve = NSAnimationEaseInOut;
-//        [anim startAnimation];
-        
-        
     }else if (!self.quarterDialView.superview) {
         [self addSubview:self.quarterDialView];
     }else if (!self.secondDialView.superview) {
         [self addSubview:self.secondDialView];
+    }else if (!self.textField.superview) {
+        [self addSubview:self.textField];
     }else{
 
     _rotation += 1;
-//    [self.dialView setNeedsDisplay:YES];
     
     [self.hourDialView setNeedsLayout:YES];
     [self.quarterDialView setNeedsLayout:YES];
@@ -109,26 +114,12 @@
     [self.textField setFrameOrigin:NSMakePoint(self.frame.size.width/2-_textField.bounds.size.width/2, self.frame.size.height/2- _textField.bounds.size.height/2)];
     }
     [self setNeedsDisplay:YES];
-    
-//    CALayer *layer = self.secondDialView.layer;
-//
-//    CATransform3D transfrom = CATransform3DIdentity;
-//    _angle = _angle - M_PI/200.0;
-//    if (_angle == -M_PI *2) {
-//        _angle = 0;
-//        NSLog(@"_angle reset");
-//    }
-//    CGPoint point = CGPointMake(0.5, 0.5);
-////    transfrom = CATransform3DRotate(transfrom, _angle , 0.0f, 0.0f, 1.0f);
-//    transfrom = CATransform3DConcat(transfrom, CATransform3DTranslate(CATransform3DIdentity, self.secondDialView.bounds.size.width, self.secondDialView.bounds.size.height, 0));
-//    layer.anchorPoint = point;
-//    layer.transform = transfrom;
 }
 
 - (void)drawRect:(NSRect)rect {
     [super drawRect:rect];
     
-    [[NSColor whiteColor] set];
+    [[NSColor colorWithWhite:0.7 alpha:1] set];
     
     [self.circularPath stroke];
     [_linePath removeAllPoints];
@@ -194,7 +185,7 @@
         _textField.bordered = NO;
         _textField.backgroundColor = [NSColor clearColor];
         _textField.selectable = NO;
-        _textField.textColor = [NSColor whiteColor];
+        _textField.textColor = [NSColor colorWithWhite:0.7 alpha:1];
         _textField.cell.font = [NSFont fontWithName:@"HelveticaNeue-UltraLight" size:108*_rate];
         _textField.cell.alignment = NSTextAlignmentCenter;
     }

@@ -62,7 +62,7 @@
         textField.backgroundColor = [NSColor clearColor];
         textField.bordered = NO;
         textField.selectable = NO;
-        textField.textColor = [NSColor whiteColor];
+        textField.textColor = [NSColor colorWithWhite:0.7 alpha:1];
         textField.stringValue = text;
         if (textArray.count == 12) {
             textField.cell.font = [NSFont fontWithName:@"Libian SC" size:44*_rate];
@@ -108,7 +108,7 @@
     }
     
     
-    [[NSColor whiteColor] set];
+    [[NSColor colorWithWhite:0.7 alpha:1] set];
     [path stroke];
     
     [path removeAllPoints];
