@@ -14,7 +14,7 @@
     float _minRadius;
     float _radius;
     float _rate;
-    NSBezierPath *path;
+    NSBezierPath *_path;
     NSMutableArray *_textFields;
 }
 
@@ -32,7 +32,7 @@
         _minRadius = minRadius;
         _radius = radius;
         _textFields = [NSMutableArray array];
-        path = [NSBezierPath bezierPath];
+        _path = [NSBezierPath bezierPath];
     }
     return self;
 }
@@ -40,7 +40,7 @@
 - (instancetype)initWithFrame:(NSRect)frameRect {
     if (self = [super initWithFrame:frameRect]) {
         _textFields = [NSMutableArray array];
-        path = [NSBezierPath bezierPath];
+        _path = [NSBezierPath bezierPath];
     }
     return self;
 }
@@ -55,7 +55,7 @@
     _rotation = 0;
     float radius = (_radius + _minRadius)/2;;
     float angle = M_PI/180*(360.0/textArray.count);
-    NSUInteger i = textArray.count;
+    NSUInteger i = 0;
     for (NSString *text in _textArray) {
         
         NSTextField *textField = [[NSTextField alloc] init];
@@ -71,13 +71,13 @@
         }
         [textField sizeToFit];
         
-        NSPoint origin = NSMakePoint(radius*cosf(angle*(i+0.5)) - textField.frame.size.width/2 + _radius,
-                                     radius*sinf(angle*(i+0.5)) - textField.frame.size.height/2 + _radius);
+        NSPoint origin = NSMakePoint(radius*sinf(angle*(i+0.5)) - textField.frame.size.width/2 + _radius,
+                                     radius*cosf(angle*(i+0.5)) - textField.frame.size.height/2 + _radius);
         
         [textField setFrameOrigin:origin];
-        textField.frameCenterRotation = 180/M_PI * angle*(i+0.5) + 90;
+        textField.frameCenterRotation = 180/M_PI * (M_PI - angle*(i+0.5));
         [self addSubview:textField];
-        i --;
+        i ++;
         [_textFields addObject:textField];
     }
     
@@ -87,8 +87,8 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    NSRect _rect = NSMakeRect((dirtyRect.size.width - dirtyRect.size.height)/2, 0, dirtyRect.size.height, dirtyRect.size.height);
-    [path appendBezierPathWithOvalInRect:_rect];
+    NSRect _rect = NSMakeRect((dirtyRect.size.width - dirtyRect.size.height)/2+1, 1, dirtyRect.size.height-2, dirtyRect.size.height-2);
+    [_path appendBezierPathWithOvalInRect:_rect];
     
     CGFloat radius = 0;
     float radian = 360.0/(self.textArray.count == 0 ? 1 : self.textArray.count);
@@ -103,15 +103,15 @@
         
         NSPoint toPoint = NSMakePoint(dirtyRect.size.width/2 + _minRadius*cosf(angle*i),
                                       dirtyRect.size.width/2 + _minRadius*sinf(angle*i));
-        [path moveToPoint:origin];
-        [path lineToPoint:toPoint];
+        [_path moveToPoint:origin];
+        [_path lineToPoint:toPoint];
     }
     
     
     [[NSColor colorWithWhite:0.7 alpha:1] set];
-    [path stroke];
+    [_path stroke];
     
-    [path removeAllPoints];
+    [_path removeAllPoints];
 }
 
 - (NSArray<NSString *> *)textArray {

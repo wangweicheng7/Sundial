@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6757122A2251EA3B0083AED1 /* FZXZTFW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 675712292251EA180083AED1 /* FZXZTFW.TTF */; };
 		BC12C1F81FC3E44E00F37B76 /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = BC12C1F51FC3E44E00F37B76 /* Preferences.h */; };
 		BC12C1F91FC3E44E00F37B76 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BC12C1F61FC3E44E00F37B76 /* Preferences.m */; };
 		BC12C1FA1FC3E44E00F37B76 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC12C1F71FC3E44E00F37B76 /* Preferences.xib */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		675712292251EA180083AED1 /* FZXZTFW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXZTFW.TTF; sourceTree = "<group>"; };
 		BC12C1F51FC3E44E00F37B76 /* Preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		BC12C1F61FC3E44E00F37B76 /* Preferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
 		BC12C1F71FC3E44E00F37B76 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				BC6B63121FBAF302002AD625 /* NSBezierPath+quartz.h */,
 				BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */,
 				BC12C1F51FC3E44E00F37B76 /* Preferences.h */,
+				675712292251EA180083AED1 /* FZXZTFW.TTF */,
 				BC12C1F61FC3E44E00F37B76 /* Preferences.m */,
 				BC12C1F71FC3E44E00F37B76 /* Preferences.xib */,
 			);
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6757122A2251EA3B0083AED1 /* FZXZTFW.TTF in Resources */,
 				BC12C1FA1FC3E44E00F37B76 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

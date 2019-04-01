@@ -22,5 +22,9 @@
 	<string>Copyright © 2017年 wangweicheng. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>Sundial.Sundial</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FZXZTFW.TTF</string>
+	</array>
 </dict>
 </plist>

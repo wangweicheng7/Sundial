@@ -149,7 +149,7 @@
     
 }
 
-//计算时间差
+/// 计算时间差，画变盘上的红色指针
 -(NSTimeInterval)countTimeInterval{
 
     NSDate *date = [NSDate date];
@@ -165,7 +165,7 @@
     return interval;
 }
 
-//计算时间差
+/// 计算时间差，显示时间
 -(NSString *)currentDisplayTime{
     
     NSDate *date = [NSDate date];
@@ -178,7 +178,7 @@
     
     return time;
 }
-
+/// 时间刻度
 - (NSTextField *)textField {
     if (!_textField) {
         _textField = [[NSTextField alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.height-300*_rate, self.frame.size.height/2-150*_rate)];
