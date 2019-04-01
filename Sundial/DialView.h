@@ -14,4 +14,6 @@
 
 - (instancetype)initWithRadius:(CGFloat)radius center:(NSPoint)point minRadius:(CGFloat)minRadius;
 
+- (instancetype)initWithRadius:(CGFloat)radius center:(NSPoint)point minRadius:(CGFloat)minRadius startAngle:(CGFloat)angle;
+
 @end

@@ -14,6 +14,7 @@
     float _minRadius;
     float _radius;
     float _rate;
+    float _startAngle;
     NSBezierPath *_path;
     NSMutableArray *_textFields;
 }
@@ -24,10 +25,22 @@
 
 @synthesize textArray = _textArray;
 
+- (instancetype)initWithRadius:(CGFloat)radius center:(NSPoint)point minRadius:(CGFloat)minRadius startAngle:(CGFloat)angle {
+    _rate = radius*2/([NSScreen mainScreen].visibleFrame.size.height);
+    _startAngle = angle;
+    if (self = [super initWithFrame:NSMakeRect(point.x - radius, point.y - radius, radius*2, radius*2)]) {
+        _minRadius = minRadius;
+        _radius = radius;
+        _textFields = [NSMutableArray array];
+        _path = [NSBezierPath bezierPath];
+    }
+    return self;
+}
+
 - (instancetype)initWithRadius:(CGFloat)radius center:(NSPoint)point minRadius:(CGFloat)minRadius {
     
     _rate = radius*2/([NSScreen mainScreen].visibleFrame.size.height);
-    
+    _startAngle = 0;
     if (self = [super initWithFrame:NSMakeRect(point.x - radius, point.y - radius, radius*2, radius*2)]) {
         _minRadius = minRadius;
         _radius = radius;
@@ -41,6 +54,7 @@
     if (self = [super initWithFrame:frameRect]) {
         _textFields = [NSMutableArray array];
         _path = [NSBezierPath bezierPath];
+        _startAngle = 0;
     }
     return self;
 }
@@ -55,6 +69,8 @@
     _rotation = 0;
     float radius = (_radius + _minRadius)/2;;
     float angle = M_PI/180*(360.0/textArray.count);
+    // 文字偏移弧度
+    float offset = _startAngle - angle/2;
     NSUInteger i = 0;
     for (NSString *text in _textArray) {
         
@@ -71,22 +87,22 @@
         }
         [textField sizeToFit];
         
-        NSPoint origin = NSMakePoint(radius*sinf(angle*(i+0.5)) - textField.frame.size.width/2 + _radius,
-                                     radius*cosf(angle*(i+0.5)) - textField.frame.size.height/2 + _radius);
+        NSPoint origin = NSMakePoint(radius*sinf(angle*i-offset) - textField.frame.size.width/2 + _radius,
+                                     radius*cosf(angle*i-offset) - textField.frame.size.height/2 + _radius);
         
         [textField setFrameOrigin:origin];
-        textField.frameCenterRotation = 180/M_PI * (M_PI - angle*(i+0.5));
+        textField.frameCenterRotation = 180/M_PI * (M_PI - (angle*i-offset));
         [self addSubview:textField];
         i ++;
         [_textFields addObject:textField];
     }
     
-    
+    [self setNeedsDisplay:YES];
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
+    [_path removeAllPoints];
     NSRect _rect = NSMakeRect((dirtyRect.size.width - dirtyRect.size.height)/2+1, 1, dirtyRect.size.height-2, dirtyRect.size.height-2);
     [_path appendBezierPathWithOvalInRect:_rect];
     
@@ -98,11 +114,11 @@
         
         radius = dirtyRect.size.height/2;
         
-        NSPoint origin = NSMakePoint(radius+radius*cosf(angle*i),
-                                     radius+radius*sinf(angle*i));
+        NSPoint origin = NSMakePoint(radius+radius*cosf(angle*i-_startAngle),
+                                     radius+radius*sinf(angle*i-_startAngle));
         
-        NSPoint toPoint = NSMakePoint(dirtyRect.size.width/2 + _minRadius*cosf(angle*i),
-                                      dirtyRect.size.width/2 + _minRadius*sinf(angle*i));
+        NSPoint toPoint = NSMakePoint(dirtyRect.size.width/2 + _minRadius*cosf(angle*i-_startAngle),
+                                      dirtyRect.size.width/2 + _minRadius*sinf(angle*i-_startAngle));
         [_path moveToPoint:origin];
         [_path lineToPoint:toPoint];
     }

@@ -72,7 +72,8 @@
     
     
     self.hourDialView.textArray = @[@"子", @"丑", @"寅", @"卯", @"辰", @"巳", @"午", @"未", @"申", @"酉", @"戌", @"亥"];
-    self.quarterDialView.textArray = @[@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正"];
+    self.quarterDialView.textArray = @[@"始", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正",@"初", @"正"];
+//    self.secondDialView.textArray = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",@"23",@"24",@"25",@"26",@"27",@"28",@"29",@"30",@"31",@"32",@"33",@"34",@"35",@"36",@"37",@"38",@"39",@"40",@"41",@"42",@"43",@"44",@"45",@"46",@"47",@"48",@"49",@"50",@"51",@"52",@"53",@"54",@"55",@"56",@"57",@"58",@"59"];
     
     NSMutableArray *tmp = [NSMutableArray array];
     for (NSInteger i = 0; i < 96; i ++) {
@@ -206,7 +207,7 @@
     if (!_hourDialView) {
         
         NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
-        _hourDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-100*_rate center:point minRadius:self.bounds.size.height/2-160*_rate];
+        _hourDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-100*_rate center:point minRadius:self.bounds.size.height/2-160*_rate startAngle:360.0/24*M_PI/180];
     }
     return _hourDialView;
 }
@@ -214,7 +215,7 @@
 - (DialView *)quarterDialView {
     if (!_quarterDialView) {
         NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
-        _quarterDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-50*_rate center:point minRadius:self.bounds.size.height/2-100*_rate];
+        _quarterDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-50*_rate center:point minRadius:self.bounds.size.height/2-100*_rate startAngle:360.0/24*M_PI/180];
     }
     return _quarterDialView;
 }
@@ -223,7 +224,7 @@
     if (!_secondDialView) {
         
         NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
-        _secondDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-30*_rate center:point minRadius:self.bounds.size.height/2-50*_rate];
+        _secondDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-30*_rate center:point minRadius:self.bounds.size.height/2-50*_rate startAngle:360.0/60*M_PI/180];
     }
     return _secondDialView;
 }
