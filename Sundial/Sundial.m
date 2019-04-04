@@ -224,7 +224,7 @@
     if (!_secondDialView) {
         
         NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
-        _secondDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-30*_rate center:point minRadius:self.bounds.size.height/2-50*_rate startAngle:360.0/60*M_PI/180];
+        _secondDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-30*_rate center:point minRadius:self.bounds.size.height/2-50*_rate startAngle:360.0/96*M_PI/180];
     }
     return _secondDialView;
 }
