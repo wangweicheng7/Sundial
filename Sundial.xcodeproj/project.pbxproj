@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6711519A2255D0870093712D /* NSBezierPath+quartz.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */; };
+		671151AB22560D4E0093712D /* j05457zkium.m701.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 671151AA22560D4E0093712D /* j05457zkium.m701.mp4 */; };
+		671151AC22560D4E0093712D /* j05457zkium.m701.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 671151AA22560D4E0093712D /* j05457zkium.m701.mp4 */; };
 		6757122A2251EA3B0083AED1 /* FZXZTFW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 675712292251EA180083AED1 /* FZXZTFW.TTF */; };
-		BC12C1F81FC3E44E00F37B76 /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = BC12C1F51FC3E44E00F37B76 /* Preferences.h */; };
-		BC12C1F91FC3E44E00F37B76 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BC12C1F61FC3E44E00F37B76 /* Preferences.m */; };
-		BC12C1FA1FC3E44E00F37B76 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC12C1F71FC3E44E00F37B76 /* Preferences.xib */; };
-		BC12C1FB1FC3E46D00F37B76 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = BC12C1F61FC3E44E00F37B76 /* Preferences.m */; };
-		BC12C1FC1FC3E47000F37B76 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC12C1F71FC3E44E00F37B76 /* Preferences.xib */; };
+		677C1EB0225CB34200143CB5 /* NSColor+hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1EAE225CB34200143CB5 /* NSColor+hex.h */; };
+		677C1EB1225CB34200143CB5 /* NSColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EAF225CB34200143CB5 /* NSColor+hex.m */; };
+		677C1EB3225CB9E300143CB5 /* NSColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EAF225CB34200143CB5 /* NSColor+hex.m */; };
+		677C1EBF225CDE5500143CB5 /* NSImage+color.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1EBD225CDE5500143CB5 /* NSImage+color.h */; };
+		677C1EC0225CDE5500143CB5 /* NSImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EBE225CDE5500143CB5 /* NSImage+color.m */; };
+		677C1EC1225CDF0F00143CB5 /* NSImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EBE225CDE5500143CB5 /* NSImage+color.m */; };
+		677C1EC7225DB62800143CB5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC6B62B41FB9BFD5002AD625 /* Info.plist */; };
+		677C1ECB225DC0BE00143CB5 /* Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1EA9225C7CE600143CB5 /* Configuration.h */; };
+		677C1ECC225DC0C100143CB5 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EAA225C7CE600143CB5 /* Configuration.m */; };
+		677C1ECD225DC0C200143CB5 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EAA225C7CE600143CB5 /* Configuration.m */; };
+		677C1ECE225DC1FD00143CB5 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 671151962255CFA30093712D /* Preferences.m */; };
+		677C1ECF225DC1FE00143CB5 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 671151962255CFA30093712D /* Preferences.m */; };
+		677C1ED0225DC20100143CB5 /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 671151952255CFA30093712D /* Preferences.h */; };
+		677C1ED3225DD19800143CB5 /* StarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1ED1225DD19800143CB5 /* StarView.h */; };
+		677C1ED4225DD19800143CB5 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1ED2225DD19800143CB5 /* StarView.m */; };
+		677C1ED5225DD70900143CB5 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1ED2225DD19800143CB5 /* StarView.m */; };
 		BC6B62F01FB9C2D7002AD625 /* Sundial.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62EE1FB9C2D7002AD625 /* Sundial.m */; };
 		BC6B62FB1FBA94E0002AD625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62FA1FBA94E0002AD625 /* AppDelegate.m */; };
 		BC6B62FE1FBA94E0002AD625 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62FD1FBA94E0002AD625 /* ViewController.m */; };
@@ -26,7 +40,6 @@
 		BC6B63181FBB099D002AD625 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6B63171FBB0994002AD625 /* ScreenSaver.framework */; };
 		BC6B631A1FBB09C1002AD625 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6B63191FBB09BE002AD625 /* Quartz.framework */; };
 		BC6B631D1FBB0B61002AD625 /* Sundial.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6B62ED1FB9C2D7002AD625 /* Sundial.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC6B631F1FBB0DF9002AD625 /* NSBezierPath+quartz.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */; };
 		BC6B63251FBB2EB3002AD625 /* DialView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B630C1FBAA5E0002AD625 /* DialView.m */; };
 		BC6B632B1FBB4E3E002AD625 /* Sundial.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62EE1FB9C2D7002AD625 /* Sundial.m */; };
 		BC8486221FBD65EF0023ED62 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8486211FBD65EF0023ED62 /* example.png */; };
@@ -43,10 +56,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		671151952255CFA30093712D /* Preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		671151962255CFA30093712D /* Preferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		671151AA22560D4E0093712D /* j05457zkium.m701.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = j05457zkium.m701.mp4; sourceTree = "<group>"; };
 		675712292251EA180083AED1 /* FZXZTFW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXZTFW.TTF; sourceTree = "<group>"; };
-		BC12C1F51FC3E44E00F37B76 /* Preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
-		BC12C1F61FC3E44E00F37B76 /* Preferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
-		BC12C1F71FC3E44E00F37B76 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		677C1EA9225C7CE600143CB5 /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		677C1EAA225C7CE600143CB5 /* Configuration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		677C1EAE225CB34200143CB5 /* NSColor+hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSColor+hex.h"; sourceTree = "<group>"; };
+		677C1EAF225CB34200143CB5 /* NSColor+hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSColor+hex.m"; sourceTree = "<group>"; };
+		677C1EBD225CDE5500143CB5 /* NSImage+color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSImage+color.h"; sourceTree = "<group>"; };
+		677C1EBE225CDE5500143CB5 /* NSImage+color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSImage+color.m"; sourceTree = "<group>"; };
+		677C1ED1225DD19800143CB5 /* StarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
+		677C1ED2225DD19800143CB5 /* StarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
 		BC6B62AD1FB9BFD5002AD625 /* Sundial.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sundial.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6B62B41FB9BFD5002AD625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6B62ED1FB9C2D7002AD625 /* Sundial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sundial.h; sourceTree = "<group>"; };
@@ -119,10 +140,17 @@
 				BC6B630C1FBAA5E0002AD625 /* DialView.m */,
 				BC6B63121FBAF302002AD625 /* NSBezierPath+quartz.h */,
 				BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */,
-				BC12C1F51FC3E44E00F37B76 /* Preferences.h */,
 				675712292251EA180083AED1 /* FZXZTFW.TTF */,
-				BC12C1F61FC3E44E00F37B76 /* Preferences.m */,
-				BC12C1F71FC3E44E00F37B76 /* Preferences.xib */,
+				671151952255CFA30093712D /* Preferences.h */,
+				671151962255CFA30093712D /* Preferences.m */,
+				677C1EA9225C7CE600143CB5 /* Configuration.h */,
+				677C1EAA225C7CE600143CB5 /* Configuration.m */,
+				677C1EAE225CB34200143CB5 /* NSColor+hex.h */,
+				677C1EAF225CB34200143CB5 /* NSColor+hex.m */,
+				677C1EBD225CDE5500143CB5 /* NSImage+color.h */,
+				677C1EBE225CDE5500143CB5 /* NSImage+color.m */,
+				677C1ED1225DD19800143CB5 /* StarView.h */,
+				677C1ED2225DD19800143CB5 /* StarView.m */,
 			);
 			path = Sundial;
 			sourceTree = "<group>";
@@ -130,6 +158,7 @@
 		BC6B62F81FBA94E0002AD625 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				671151AA22560D4E0093712D /* j05457zkium.m701.mp4 */,
 				BC8486211FBD65EF0023ED62 /* example.png */,
 				BC6B62F91FBA94E0002AD625 /* AppDelegate.h */,
 				BC6B62FA1FBA94E0002AD625 /* AppDelegate.m */,
@@ -160,8 +189,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677C1EBF225CDE5500143CB5 /* NSImage+color.h in Headers */,
+				677C1ECB225DC0BE00143CB5 /* Configuration.h in Headers */,
+				677C1ED0225DC20100143CB5 /* Preferences.h in Headers */,
 				BC6B631D1FBB0B61002AD625 /* Sundial.h in Headers */,
-				BC12C1F81FC3E44E00F37B76 /* Preferences.h in Headers */,
+				677C1EB0225CB34200143CB5 /* NSColor+hex.h in Headers */,
+				677C1ED3225DD19800143CB5 /* StarView.h in Headers */,
 				BC6B63141FBAF302002AD625 /* NSBezierPath+quartz.h in Headers */,
 				BC6B630D1FBAA5E0002AD625 /* DialView.h in Headers */,
 			);
@@ -250,8 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				671151AB22560D4E0093712D /* j05457zkium.m701.mp4 in Resources */,
 				6757122A2251EA3B0083AED1 /* FZXZTFW.TTF in Resources */,
-				BC12C1FA1FC3E44E00F37B76 /* Preferences.xib in Resources */,
+				677C1EC7225DB62800143CB5 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8486221FBD65EF0023ED62 /* example.png in Resources */,
+				671151AC22560D4E0093712D /* j05457zkium.m701.mp4 in Resources */,
 				BC6B63001FBA94E0002AD625 /* Assets.xcassets in Resources */,
-				BC12C1FC1FC3E47000F37B76 /* Preferences.xib in Resources */,
 				BC6B63031FBA94E0002AD625 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,9 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677C1EC0225CDE5500143CB5 /* NSImage+color.m in Sources */,
 				BC6B62F01FB9C2D7002AD625 /* Sundial.m in Sources */,
+				677C1ED4225DD19800143CB5 /* StarView.m in Sources */,
 				BC6B63151FBAF302002AD625 /* NSBezierPath+quartz.m in Sources */,
-				BC12C1F91FC3E44E00F37B76 /* Preferences.m in Sources */,
+				677C1ECE225DC1FD00143CB5 /* Preferences.m in Sources */,
+				677C1EB1225CB34200143CB5 /* NSColor+hex.m in Sources */,
+				677C1ECC225DC0C100143CB5 /* Configuration.m in Sources */,
 				BC6B630E1FBAA5E0002AD625 /* DialView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,12 +339,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC6B632B1FBB4E3E002AD625 /* Sundial.m in Sources */,
+				677C1ECD225DC0C200143CB5 /* Configuration.m in Sources */,
+				677C1EB3225CB9E300143CB5 /* NSColor+hex.m in Sources */,
+				677C1ED5225DD70900143CB5 /* StarView.m in Sources */,
 				BC6B63251FBB2EB3002AD625 /* DialView.m in Sources */,
-				BC6B631F1FBB0DF9002AD625 /* NSBezierPath+quartz.m in Sources */,
-				BC12C1FB1FC3E46D00F37B76 /* Preferences.m in Sources */,
+				677C1ECF225DC1FE00143CB5 /* Preferences.m in Sources */,
 				BC6B62FE1FBA94E0002AD625 /* ViewController.m in Sources */,
 				BC6B63061FBA94E0002AD625 /* main.m in Sources */,
 				BC6B62FB1FBA94E0002AD625 /* AppDelegate.m in Sources */,
+				677C1EC1225CDF0F00143CB5 /* NSImage+color.m in Sources */,
+				6711519A2255D0870093712D /* NSBezierPath+quartz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,9 +487,10 @@
 				DEVELOPMENT_TEAM = 3B89Q3LKCK;
 				INFOPLIST_FILE = Sundial/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sundial.pw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sundial.weicheng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
@@ -464,8 +507,9 @@
 				DEVELOPMENT_TEAM = 3B89Q3LKCK;
 				INFOPLIST_FILE = Sundial/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sundial.pw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sundial.weicheng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;

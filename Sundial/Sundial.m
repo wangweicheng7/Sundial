@@ -8,28 +8,25 @@
 
 #import "Sundial.h"
 #import "DialView.h"
+#import "StarView.h"
 #import <Quartz/Quartz.h>
 #import "NSBezierPath+quartz.h"
 #import "Preferences.h"
+#import "Configuration.h"
 
-@interface Sundial ()
+@interface Sundial ()<CAAnimationDelegate>
 {
-    CGFloat _rotation;
     float _rate;
-    NSBezierPath *_linePath;
-    CGFloat _angle;
-    
 }
 
 @property (nonatomic, strong) NSArray<NSString *> *textArray;
+
+@property (nonatomic, strong) StarView *starView;
 @property (nonatomic, strong) DialView *hourDialView;
 @property (nonatomic, strong) DialView *quarterDialView;
 @property (nonatomic, strong) DialView *secondDialView;
-@property (nonatomic, strong) NSBezierPath *circularPath;
 @property (nonatomic, strong) NSTextField *textField;
 @property (nonatomic, strong) NSTextField   *timeTextField;
-
-//@property (nonatomic, strong) TaiChiView *taiChiView;
 
 @end
 
@@ -37,12 +34,10 @@
 
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview {
     if(self = [super initWithFrame:frame isPreview:isPreview]) {
-        _rotation = 0;
         
         _rate = (frame.size.height)/([NSScreen mainScreen].visibleFrame.size.height);
         [self setAnimationTimeInterval:0.25];
-//        [self addSubview:self.taiChiView];
-                
+        
     }
     return self;
 }
@@ -81,7 +76,10 @@
     }
     self.secondDialView.textArray = tmp;
     
-    _linePath = [NSBezierPath bezierPath];
+//    [self.player play];
+    [self display:YES];
+    
+    
 }
 
 - (BOOL)hasConfigureSheet {
@@ -89,7 +87,8 @@
 }
 
 - (NSWindow *)configureSheet {
-    return [[[Preferences alloc] init] window];
+    Preferences *preferences = [[Preferences alloc] initWithContentRect:CGRectMake(0, 0, 500, 300) styleMask:NSWindowStyleMaskNonactivatingPanel backing:NSBackingStoreBuffered defer:YES];
+    return preferences;
 }
 
 - (void)animateOneFrame {
@@ -97,29 +96,106 @@
     
     if (!self.hourDialView.superview) {
         [self addSubview:self.hourDialView];
+        [self.hourDialView display:YES];
     }else if (!self.quarterDialView.superview) {
         [self addSubview:self.quarterDialView];
+        [self.quarterDialView display:YES];
     }else if (!self.secondDialView.superview) {
         [self addSubview:self.secondDialView];
+        [self.secondDialView display:YES];
     }else if (!self.textField.superview) {
         [self addSubview:self.textField];
+    }else if (![self.starView superview]){
+        [self addSubview:self.starView];
+        [self.starView startAnimation];
     }else{
-
-    _rotation += 1;
-    
-    [self.hourDialView setNeedsLayout:YES];
-    [self.quarterDialView setNeedsLayout:YES];
-    [self.secondDialView setNeedsLayout:YES];
-    self.textField.stringValue = [self currentDisplayTime];
-    [self.textField sizeToFit];
-    [self.textField setFrameOrigin:NSMakePoint(self.frame.size.width/2-_textField.bounds.size.width/2, self.frame.size.height/2- _textField.bounds.size.height/2)];
+        
+        self.textField.stringValue = [self currentDisplayTime];
+        [self.textField sizeToFit];
+        [self.textField setFrameOrigin:NSMakePoint(self.frame.size.width/2-_textField.bounds.size.width/2, self.frame.size.height/2- _textField.bounds.size.height/2)];
     }
-    [self setNeedsDisplay:YES];
+    
+}
+
+- (void)display:(BOOL)animation {
+    // 画内圆
+    NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
+    CGFloat cicleRadius = self.bounds.size.height/2-160*_rate;
+    NSRect pathRect = NSMakeRect(point.x - cicleRadius, point.y - cicleRadius, cicleRadius*2, cicleRadius*2);
+    NSBezierPath *circularPath = [NSBezierPath bezierPathWithOvalInRect:pathRect];
+    
+    circularPath.lineWidth = 1.0f;
+    
+    CAShapeLayer *clayer = [CAShapeLayer layer];
+    clayer.fillColor = [NSColor clearColor].CGColor;
+    clayer.lineWidth = 1.0f;
+    clayer.lineCap = kCALineCapRound;
+    clayer.lineJoin = kCALineJoinRound;
+    clayer.strokeColor = [Configuration shareInstance].tintColor.CGColor;
+    clayer.autoreverses = YES;
+    
+    // 关联layer和贝塞尔路径
+    clayer.path = [circularPath quartzPath];
+    [self setWantsLayer:YES];
+    [self.layer addSublayer:clayer];
+    
+    // 画指针
+    NSBezierPath *linePath = [NSBezierPath bezierPath];
+    
+    CGRect rect = self.bounds;
+    float angle = M_PI/180*(360/1440.0);
+    float radius = rect.size.height/2 - 30*_rate;
+    float minRadius = rect.size.height/2-180*_rate;
+    
+    
+    float minute = [self countTimeInterval]/60.0;
+    
+    NSPoint origin = NSMakePoint(rect.size.width/2+radius*sinf( angle*minute),
+                                 rect.size.height/2+radius*cosf(angle*minute));
+    
+    NSPoint toPoint1 = NSMakePoint(rect.size.width/2+minRadius*sinf(angle*minute+M_PI/360),
+                                   rect.size.height/2+minRadius*cosf(angle*minute+M_PI/360));
+    
+    NSPoint toPoint2 = NSMakePoint(rect.size.width/2+minRadius*sinf(angle*minute-M_PI/360),
+                                   rect.size.height/2+minRadius*cosf(angle*minute-M_PI/360));
+    
+    [linePath moveToPoint:toPoint2];
+    [linePath lineToPoint:origin];
+    
+    [linePath lineToPoint:toPoint1];
+    [linePath lineToPoint:origin];
+    
+    
+    
+    CAShapeLayer *llayer = [CAShapeLayer layer];
+    llayer.fillColor = [NSColor clearColor].CGColor;
+    llayer.lineWidth = 1.0f;
+    llayer.lineCap = kCALineCapRound;
+    llayer.lineJoin = kCALineJoinRound;
+    llayer.strokeColor = [NSColor redColor].CGColor;
+    llayer.autoreverses = NO;
+    
+    // 关联layer和贝塞尔路径
+    llayer.path = [linePath quartzPath];
+    [self setWantsLayer:YES];
+    [self.layer addSublayer:llayer];
+    
+    // 创建Animation
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    anim.fromValue = @(0.0);
+    anim.toValue = @(1.0);
+    anim.duration = 1.0;
+    anim.delegate = self;
+    if (animation) {
+        // 设置layer的animation
+        [clayer addAnimation:anim forKey:nil];
+        [llayer addAnimation:anim forKey:nil];
+    }
 }
 
 - (void)drawRect:(NSRect)rect {
     [super drawRect:rect];
-    
+    /*
     [[NSColor colorWithWhite:0.7 alpha:1] set];
     
     [self.circularPath stroke];
@@ -147,12 +223,12 @@
     [_linePath closePath];
     [[NSColor redColor] set];
     [_linePath fill];
-    
+    */
 }
 
 /// 计算时间差，画变盘上的红色指针
 -(NSTimeInterval)countTimeInterval{
-
+    
     NSDate *date = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"HH:mm:ss";
@@ -186,21 +262,29 @@
         _textField.bordered = NO;
         _textField.backgroundColor = [NSColor clearColor];
         _textField.selectable = NO;
-        _textField.textColor = [NSColor colorWithWhite:0.7 alpha:1];
+        _textField.textColor = [Configuration shareInstance].tintColor;
         _textField.cell.font = [NSFont fontWithName:@"HelveticaNeue-UltraLight" size:108*_rate];
         _textField.cell.alignment = NSTextAlignmentCenter;
     }
     return _textField;
 }
 
-- (NSBezierPath *)circularPath {
-    if (!_circularPath) {
-        NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
-        CGFloat radius = self.bounds.size.height/2-160*_rate;
-        NSRect rect = NSMakeRect(point.x - radius, point.y - radius, radius*2, radius*2);
-        _circularPath = [NSBezierPath bezierPathWithOvalInRect:rect];
+//- (NSBezierPath *)circularPath {
+//    if (!_circularPath) {
+//        NSPoint point = NSMakePoint(self.frame.size.width/2, self.frame.size.height/2);
+//        CGFloat radius = self.bounds.size.height/2-160*_rate;
+//        NSRect rect = NSMakeRect(point.x - radius, point.y - radius, radius*2, radius*2);
+//        _circularPath = [NSBezierPath bezierPathWithOvalInRect:rect];
+//    }
+//    return _circularPath;
+//}
+
+- (StarView *)starView {
+    if (!_starView) {
+        _starView = [[StarView alloc] initWithFrame:self.bounds];
+        [_starView setWantsLayer:YES];
     }
-    return _circularPath;
+    return _starView;
 }
 
 - (DialView *)hourDialView {

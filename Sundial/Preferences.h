@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Preferences : NSWindowController
+NS_ASSUME_NONNULL_BEGIN
+
+@interface Preferences : NSWindow
 
 @end
+
+NS_ASSUME_NONNULL_END
