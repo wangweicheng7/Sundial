@@ -42,26 +42,6 @@
     return self;
 }
 
-- (void)exchange {
-    
-    NSPoint point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
-    _hourDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-100*_rate center:point minRadius:self.bounds.size.height/2-160*_rate];
-    _hourDialView.frameCenterRotation = 75;
-    
-    [self addSubview:self.hourDialView];
-    
-    point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
-    _quarterDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-50*_rate center:point minRadius:self.bounds.size.height/2-100*_rate];
-    
-    [self addSubview:self.quarterDialView];
-    
-    point = NSMakePoint(self.frame.size.width, self.frame.size.height/2);
-    _secondDialView = [[DialView alloc] initWithRadius:self.bounds.size.height/2-30*_rate center:point minRadius:self.bounds.size.height/2-50*_rate];
-    [self addSubview:self.secondDialView];
-    
-    
-}
-
 - (void)startAnimation {
     [super startAnimation];
     
@@ -78,8 +58,6 @@
     
 //    [self.player play];
     [self display:YES];
-    
-    
 }
 
 - (BOOL)hasConfigureSheet {
@@ -107,8 +85,10 @@
         [self addSubview:self.textField];
     }else if (![self.starView superview]){
         [self addSubview:self.starView];
-        [self.starView startAnimation];
     }else{
+        AnimationType type = [Configuration shareInstance].type;
+        [self.starView starAnimation:(type & AnimationTypeStar)];
+        [self.starView sparkAnimation:(type & AnimationTypeSpark)];
         
         self.textField.stringValue = [self currentDisplayTime];
         [self.textField sizeToFit];

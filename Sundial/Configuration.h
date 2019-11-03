@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_OPTIONS(NSUInteger, AnimationType) {
+    AnimationTypeNone = 0,
+    AnimationTypeStar = 1 << 0,
+    AnimationTypeSpark = 1 << 1
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class NSColor;
@@ -21,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSColor *tintColor;
 
 @property (nonatomic, strong, readonly) NSArray<NSColor *> *colorSet;
+
+@property (nonatomic, assign) AnimationType type;
 
 @end
 

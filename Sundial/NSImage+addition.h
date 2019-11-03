@@ -16,4 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface NSImage (bundle)
+
++ (instancetype)imageWithName:(NSString *)imgName;
+
+@end
+
 NS_ASSUME_NONNULL_END

@@ -8,15 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6711519A2255D0870093712D /* NSBezierPath+quartz.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */; };
-		671151AB22560D4E0093712D /* j05457zkium.m701.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 671151AA22560D4E0093712D /* j05457zkium.m701.mp4 */; };
 		671151AC22560D4E0093712D /* j05457zkium.m701.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 671151AA22560D4E0093712D /* j05457zkium.m701.mp4 */; };
-		6757122A2251EA3B0083AED1 /* FZXZTFW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 675712292251EA180083AED1 /* FZXZTFW.TTF */; };
 		677C1EB0225CB34200143CB5 /* NSColor+hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1EAE225CB34200143CB5 /* NSColor+hex.h */; };
 		677C1EB1225CB34200143CB5 /* NSColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EAF225CB34200143CB5 /* NSColor+hex.m */; };
 		677C1EB3225CB9E300143CB5 /* NSColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EAF225CB34200143CB5 /* NSColor+hex.m */; };
-		677C1EBF225CDE5500143CB5 /* NSImage+color.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1EBD225CDE5500143CB5 /* NSImage+color.h */; };
-		677C1EC0225CDE5500143CB5 /* NSImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EBE225CDE5500143CB5 /* NSImage+color.m */; };
-		677C1EC1225CDF0F00143CB5 /* NSImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EBE225CDE5500143CB5 /* NSImage+color.m */; };
+		677C1EBF225CDE5500143CB5 /* NSImage+addition.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1EBD225CDE5500143CB5 /* NSImage+addition.h */; };
+		677C1EC0225CDE5500143CB5 /* NSImage+addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EBE225CDE5500143CB5 /* NSImage+addition.m */; };
+		677C1EC1225CDF0F00143CB5 /* NSImage+addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EBE225CDE5500143CB5 /* NSImage+addition.m */; };
 		677C1EC7225DB62800143CB5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC6B62B41FB9BFD5002AD625 /* Info.plist */; };
 		677C1ECB225DC0BE00143CB5 /* Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1EA9225C7CE600143CB5 /* Configuration.h */; };
 		677C1ECC225DC0C100143CB5 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1EAA225C7CE600143CB5 /* Configuration.m */; };
@@ -27,6 +25,19 @@
 		677C1ED3225DD19800143CB5 /* StarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 677C1ED1225DD19800143CB5 /* StarView.h */; };
 		677C1ED4225DD19800143CB5 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1ED2225DD19800143CB5 /* StarView.m */; };
 		677C1ED5225DD70900143CB5 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C1ED2225DD19800143CB5 /* StarView.m */; };
+		67F48F06225E2977006C683E /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48EFA225E2977006C683E /* star.png */; };
+		67F48F07225E2977006C683E /* spark_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48EFB225E2977006C683E /* spark_red.png */; };
+		67F48F08225E2977006C683E /* TwinkleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48EFC225E2977006C683E /* TwinkleImage.png */; };
+		67F48F09225E2977006C683E /* bgAnimationStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48EFD225E2977006C683E /* bgAnimationStar.png */; };
+		67F48F0A225E2977006C683E /* spark_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48EFE225E2977006C683E /* spark_blue.png */; };
+		67F48F0B225E2977006C683E /* spark_cyan.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48EFF225E2977006C683E /* spark_cyan.png */; };
+		67F48F0C225E2977006C683E /* spark_magenta.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48F00225E2977006C683E /* spark_magenta.png */; };
+		67F48F0D225E2977006C683E /* spark_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48F01225E2977006C683E /* spark_yellow.png */; };
+		67F48F0E225E2977006C683E /* cycle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48F02225E2977006C683E /* cycle1.png */; };
+		67F48F0F225E2977006C683E /* spark_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48F03225E2977006C683E /* spark_green.png */; };
+		67F48F10225E2977006C683E /* bgAnimationStar1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48F04225E2977006C683E /* bgAnimationStar1.png */; };
+		67F48F11225E2977006C683E /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F48F05225E2977006C683E /* spark.png */; };
+		67F48F13225EFDFC006C683E /* FZXZTFW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 67F48F12225EFDFC006C683E /* FZXZTFW.TTF */; };
 		BC6B62F01FB9C2D7002AD625 /* Sundial.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62EE1FB9C2D7002AD625 /* Sundial.m */; };
 		BC6B62FB1FBA94E0002AD625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62FA1FBA94E0002AD625 /* AppDelegate.m */; };
 		BC6B62FE1FBA94E0002AD625 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62FD1FBA94E0002AD625 /* ViewController.m */; };
@@ -59,15 +70,27 @@
 		671151952255CFA30093712D /* Preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		671151962255CFA30093712D /* Preferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
 		671151AA22560D4E0093712D /* j05457zkium.m701.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = j05457zkium.m701.mp4; sourceTree = "<group>"; };
-		675712292251EA180083AED1 /* FZXZTFW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXZTFW.TTF; sourceTree = "<group>"; };
 		677C1EA9225C7CE600143CB5 /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		677C1EAA225C7CE600143CB5 /* Configuration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		677C1EAE225CB34200143CB5 /* NSColor+hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSColor+hex.h"; sourceTree = "<group>"; };
 		677C1EAF225CB34200143CB5 /* NSColor+hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSColor+hex.m"; sourceTree = "<group>"; };
-		677C1EBD225CDE5500143CB5 /* NSImage+color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSImage+color.h"; sourceTree = "<group>"; };
-		677C1EBE225CDE5500143CB5 /* NSImage+color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSImage+color.m"; sourceTree = "<group>"; };
+		677C1EBD225CDE5500143CB5 /* NSImage+addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSImage+addition.h"; sourceTree = "<group>"; };
+		677C1EBE225CDE5500143CB5 /* NSImage+addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSImage+addition.m"; sourceTree = "<group>"; };
 		677C1ED1225DD19800143CB5 /* StarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
 		677C1ED2225DD19800143CB5 /* StarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
+		67F48EFA225E2977006C683E /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		67F48EFB225E2977006C683E /* spark_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark_red.png; sourceTree = "<group>"; };
+		67F48EFC225E2977006C683E /* TwinkleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwinkleImage.png; sourceTree = "<group>"; };
+		67F48EFD225E2977006C683E /* bgAnimationStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgAnimationStar.png; sourceTree = "<group>"; };
+		67F48EFE225E2977006C683E /* spark_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark_blue.png; sourceTree = "<group>"; };
+		67F48EFF225E2977006C683E /* spark_cyan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark_cyan.png; sourceTree = "<group>"; };
+		67F48F00225E2977006C683E /* spark_magenta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark_magenta.png; sourceTree = "<group>"; };
+		67F48F01225E2977006C683E /* spark_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark_yellow.png; sourceTree = "<group>"; };
+		67F48F02225E2977006C683E /* cycle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle1.png; sourceTree = "<group>"; };
+		67F48F03225E2977006C683E /* spark_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark_green.png; sourceTree = "<group>"; };
+		67F48F04225E2977006C683E /* bgAnimationStar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgAnimationStar1.png; sourceTree = "<group>"; };
+		67F48F05225E2977006C683E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		67F48F12225EFDFC006C683E /* FZXZTFW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXZTFW.TTF; sourceTree = "<group>"; };
 		BC6B62AD1FB9BFD5002AD625 /* Sundial.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sundial.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6B62B41FB9BFD5002AD625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6B62ED1FB9C2D7002AD625 /* Sundial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sundial.h; sourceTree = "<group>"; };
@@ -111,6 +134,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67F48EF9225E290C006C683E /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				67F48F12225EFDFC006C683E /* FZXZTFW.TTF */,
+				67F48EFD225E2977006C683E /* bgAnimationStar.png */,
+				67F48F04225E2977006C683E /* bgAnimationStar1.png */,
+				67F48F02225E2977006C683E /* cycle1.png */,
+				67F48EFE225E2977006C683E /* spark_blue.png */,
+				67F48EFF225E2977006C683E /* spark_cyan.png */,
+				67F48F03225E2977006C683E /* spark_green.png */,
+				67F48F00225E2977006C683E /* spark_magenta.png */,
+				67F48EFB225E2977006C683E /* spark_red.png */,
+				67F48F01225E2977006C683E /* spark_yellow.png */,
+				67F48F05225E2977006C683E /* spark.png */,
+				67F48EFA225E2977006C683E /* star.png */,
+				67F48EFC225E2977006C683E /* TwinkleImage.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		BC6B62A31FB9BFD5002AD625 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +176,7 @@
 		BC6B62AF1FB9BFD5002AD625 /* Sundial */ = {
 			isa = PBXGroup;
 			children = (
+				67F48EF9225E290C006C683E /* resource */,
 				BC6B62ED1FB9C2D7002AD625 /* Sundial.h */,
 				BC6B62EE1FB9C2D7002AD625 /* Sundial.m */,
 				BC6B62B41FB9BFD5002AD625 /* Info.plist */,
@@ -140,15 +184,14 @@
 				BC6B630C1FBAA5E0002AD625 /* DialView.m */,
 				BC6B63121FBAF302002AD625 /* NSBezierPath+quartz.h */,
 				BC6B63131FBAF302002AD625 /* NSBezierPath+quartz.m */,
-				675712292251EA180083AED1 /* FZXZTFW.TTF */,
 				671151952255CFA30093712D /* Preferences.h */,
 				671151962255CFA30093712D /* Preferences.m */,
 				677C1EA9225C7CE600143CB5 /* Configuration.h */,
 				677C1EAA225C7CE600143CB5 /* Configuration.m */,
 				677C1EAE225CB34200143CB5 /* NSColor+hex.h */,
 				677C1EAF225CB34200143CB5 /* NSColor+hex.m */,
-				677C1EBD225CDE5500143CB5 /* NSImage+color.h */,
-				677C1EBE225CDE5500143CB5 /* NSImage+color.m */,
+				677C1EBD225CDE5500143CB5 /* NSImage+addition.h */,
+				677C1EBE225CDE5500143CB5 /* NSImage+addition.m */,
 				677C1ED1225DD19800143CB5 /* StarView.h */,
 				677C1ED2225DD19800143CB5 /* StarView.m */,
 			);
@@ -189,7 +232,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677C1EBF225CDE5500143CB5 /* NSImage+color.h in Headers */,
+				677C1EBF225CDE5500143CB5 /* NSImage+addition.h in Headers */,
 				677C1ECB225DC0BE00143CB5 /* Configuration.h in Headers */,
 				677C1ED0225DC20100143CB5 /* Preferences.h in Headers */,
 				BC6B631D1FBB0B61002AD625 /* Sundial.h in Headers */,
@@ -283,9 +326,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671151AB22560D4E0093712D /* j05457zkium.m701.mp4 in Resources */,
-				6757122A2251EA3B0083AED1 /* FZXZTFW.TTF in Resources */,
+				67F48F0B225E2977006C683E /* spark_cyan.png in Resources */,
+				67F48F0A225E2977006C683E /* spark_blue.png in Resources */,
+				67F48F0C225E2977006C683E /* spark_magenta.png in Resources */,
+				67F48F06225E2977006C683E /* star.png in Resources */,
+				67F48F10225E2977006C683E /* bgAnimationStar1.png in Resources */,
+				67F48F08225E2977006C683E /* TwinkleImage.png in Resources */,
+				67F48F0E225E2977006C683E /* cycle1.png in Resources */,
+				67F48F0D225E2977006C683E /* spark_yellow.png in Resources */,
+				67F48F11225E2977006C683E /* spark.png in Resources */,
 				677C1EC7225DB62800143CB5 /* Info.plist in Resources */,
+				67F48F09225E2977006C683E /* bgAnimationStar.png in Resources */,
+				67F48F0F225E2977006C683E /* spark_green.png in Resources */,
+				67F48F07225E2977006C683E /* spark_red.png in Resources */,
+				67F48F13225EFDFC006C683E /* FZXZTFW.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +368,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCREEN_SAVER_PATH=\"${HOME}/Library/Screen Savers/${FULL_PRODUCT_NAME}\"\necho SCREEN_SAVER_PATH\nif [[ -d \"${SCREEN_SAVER_PATH}\" || -f \"${SCREEN_SAVER_PATH}\" || -L \"${SCREEN_SAVER_PATH}\" ]]; then\nrm -rf \"${SCREEN_SAVER_PATH}\"\nfi\nln -s \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" \"${SCREEN_SAVER_PATH}\"";
+			shellScript = "SCREEN_SAVER_PATH=\"${HOME}/Library/Screen Savers/${FULL_PRODUCT_NAME}\"\necho SCREEN_SAVER_PATH\nif [[ -d \"${SCREEN_SAVER_PATH}\" || -f \"${SCREEN_SAVER_PATH}\" || -L \"${SCREEN_SAVER_PATH}\" ]]; then\nrm -rf \"${SCREEN_SAVER_PATH}\"\nfi\nln -s \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" \"${SCREEN_SAVER_PATH}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -323,7 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677C1EC0225CDE5500143CB5 /* NSImage+color.m in Sources */,
+				677C1EC0225CDE5500143CB5 /* NSImage+addition.m in Sources */,
 				BC6B62F01FB9C2D7002AD625 /* Sundial.m in Sources */,
 				677C1ED4225DD19800143CB5 /* StarView.m in Sources */,
 				BC6B63151FBAF302002AD625 /* NSBezierPath+quartz.m in Sources */,
@@ -347,7 +401,7 @@
 				BC6B62FE1FBA94E0002AD625 /* ViewController.m in Sources */,
 				BC6B63061FBA94E0002AD625 /* main.m in Sources */,
 				BC6B62FB1FBA94E0002AD625 /* AppDelegate.m in Sources */,
-				677C1EC1225CDF0F00143CB5 /* NSImage+color.m in Sources */,
+				677C1EC1225CDF0F00143CB5 /* NSImage+addition.m in Sources */,
 				6711519A2255D0870093712D /* NSBezierPath+quartz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

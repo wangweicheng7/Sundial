@@ -6,7 +6,7 @@
 //  Copyright © 2019 wangweicheng. All rights reserved.
 //
 
-#import "NSImage+color.h"
+#import "NSImage+addition.h"
 
 @implementation NSImage (color)
 
@@ -19,5 +19,15 @@
     return image;
 }
 
+@end
+
+@implementation NSImage (bundle)
+
++ (instancetype)imageWithName:(NSString *)imgName {
+    NSString *resourcePath = [[NSBundle bundleWithIdentifier:@"com.sundial.weicheng"] pathForImageResource:imgName];
+//    NSString *resourcePath = [[NSBundle mainBundle] pathForImageResource:imgName];
+    NSURL *url = [NSURL fileURLWithPath:resourcePath];
+    return [[NSImage alloc] initWithContentsOfURL:url];
+}
 
 @end

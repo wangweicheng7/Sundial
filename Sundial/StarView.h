@@ -11,8 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface StarView : NSView
-
-- (void)startAnimation;
+/// 烟火动画
+- (void)sparkAnimation:(BOOL)animation;
+/// 星星动画
+- (void)starAnimation:(BOOL)animation;
 
 @end
 

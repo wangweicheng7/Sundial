@@ -10,7 +10,7 @@
 #import <ScreenSaver/ScreenSaver.h>
 #import <Foundation/Foundation.h>
 #import "Configuration.h"
-#import "NSImage+color.h"
+#import "NSImage+addition.h"
 
 #define FontFamilies @[@"Libian SC", @"FZXiaoZhuanTi-S13T"]
 
@@ -28,6 +28,9 @@
 @property (nonatomic, strong) NSTextField *previewText;
 @property (nonatomic, strong) NSColorWell *colorWell;
 @property (nonatomic, strong) NSTextField *tipsText;
+
+@property (nonatomic, strong) NSButton *starCheckButton;
+@property (nonatomic, strong) NSButton *sparkCheckButton;
 
 @end
 
@@ -48,6 +51,18 @@
         [self.contentView addSubview:self.colorWell];
         [self.contentView addSubview:self.previewText];
         [self.contentView addSubview:self.tipsText];
+        
+        [self.contentView addSubview:self.starCheckButton];
+        [self.contentView addSubview:self.sparkCheckButton];
+        
+        AnimationType type = [Configuration shareInstance].type;
+        if (type & AnimationTypeSpark) {
+            self.sparkCheckButton.state = YES;
+        }
+        if (type & AnimationTypeStar) {
+            self.starCheckButton.state = YES;
+        }
+        
         NSLog(@"Preferences init...");
         
 //        [NSTimer scheduledTimerWithTimeInterval:0.25 repeats:YES block:^(NSTimer * _Nonnull timer) {
@@ -118,6 +133,33 @@
     self.previewText.textColor = color;
 }
 */
+
+- (void)starCheckboxAction:(NSButton *)sender {
+    
+    AnimationType type = [Configuration shareInstance].type;
+    
+    if (sender.state) {
+        [Configuration shareInstance].type = type | AnimationTypeStar;
+    }else{
+        [Configuration shareInstance].type = type ^ AnimationTypeStar;
+    }
+    
+    NSLog(@"%lx", [Configuration shareInstance].type);
+}
+
+- (void)sparkCheckboxAction:(NSButton *)sender {
+    
+    AnimationType type = [Configuration shareInstance].type;
+    
+    if (sender.state) {
+        [Configuration shareInstance].type = type | AnimationTypeSpark;
+    }else{
+        [Configuration shareInstance].type = type ^ AnimationTypeSpark;
+    }
+    
+    NSLog(@"%lx", [Configuration shareInstance].type);
+}
+
 - (NSPopUpButton *)fontPopUpButton {
     if (!_fontPopUpButton) {
         _fontPopUpButton = [[NSPopUpButton alloc] initWithFrame:CGRectMake(50, 200, 100, 30) pullsDown:NO];
@@ -201,6 +243,30 @@
         _previewText.maximumNumberOfLines = 1;
     }
     return _previewText;
+}
+
+- (NSButton *)starCheckButton {
+    if (!_starCheckButton) {
+        _starCheckButton = [NSButton buttonWithTitle:@"星星动画" target:self action:@selector(starCheckboxAction:)];
+        [_starCheckButton setWantsLayer:YES];
+        [_starCheckButton setButtonType:NSButtonTypeSwitch];
+        _starCheckButton.highlighted = YES;
+        _starCheckButton.allowsMixedState = NO;
+        _starCheckButton.frame = CGRectMake(50, 100, 100, 30);
+    }
+    return _starCheckButton;
+}
+
+- (NSButton *)sparkCheckButton {
+    if (!_sparkCheckButton) {
+        _sparkCheckButton = [NSButton buttonWithTitle:@"烟火动画" target:self action:@selector(sparkCheckboxAction:)];
+        [_sparkCheckButton setWantsLayer:YES];
+        [_sparkCheckButton setButtonType:NSButtonTypeSwitch];
+        _sparkCheckButton.highlighted = YES;
+        _sparkCheckButton.allowsMixedState = NO;
+        _sparkCheckButton.frame = CGRectMake(50, 70, 100, 30);
+    }
+    return _sparkCheckButton;
 }
 
 - (NSTextField *)tipsText {
