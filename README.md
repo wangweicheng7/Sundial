@@ -14,7 +14,7 @@
 
 Or
 
-1. Download Sundial.saver.zip
+1. Download [Sundial.saver.zip](https://github.com/wangweicheng7/Sundial/releases/download/1.0.3/Sundial.saver.zip)
 2. Unzip Sundial.saver.zip
 3. Double click Sundial.saver
 
