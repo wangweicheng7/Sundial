@@ -54,6 +54,10 @@
 		BC6B63251FBB2EB3002AD625 /* DialView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B630C1FBAA5E0002AD625 /* DialView.m */; };
 		BC6B632B1FBB4E3E002AD625 /* Sundial.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B62EE1FB9C2D7002AD625 /* Sundial.m */; };
 		BC8486221FBD65EF0023ED62 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8486211FBD65EF0023ED62 /* example.png */; };
+		EFC8079F274F4EB400F90AF9 /* FZZJ-GJPKZTFU.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EFC8079B274F4EB300F90AF9 /* FZZJ-GJPKZTFU.TTF */; };
+		EFC807A0274F4EB400F90AF9 /* FZZJ-HMLSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EFC8079C274F4EB300F90AF9 /* FZZJ-HMLSJW.TTF */; };
+		EFC807A1274F4EB400F90AF9 /* STFWXZKJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EFC8079D274F4EB300F90AF9 /* STFWXZKJW.TTF */; };
+		EFC807A2274F4EB400F90AF9 /* FZZJ-QSCSJSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EFC8079E274F4EB400F90AF9 /* FZZJ-QSCSJSJW.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +116,10 @@
 		BC6B63171FBB0994002AD625 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
 		BC6B63191FBB09BE002AD625 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		BC8486211FBD65EF0023ED62 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
+		EFC8079B274F4EB300F90AF9 /* FZZJ-GJPKZTFU.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-GJPKZTFU.TTF"; sourceTree = "<group>"; };
+		EFC8079C274F4EB300F90AF9 /* FZZJ-HMLSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-HMLSJW.TTF"; sourceTree = "<group>"; };
+		EFC8079D274F4EB300F90AF9 /* STFWXZKJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = STFWXZKJW.TTF; sourceTree = "<group>"; };
+		EFC8079E274F4EB400F90AF9 /* FZZJ-QSCSJSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-QSCSJSJW.TTF"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				67F48F12225EFDFC006C683E /* FZXZTFW.TTF */,
+				EFC8079B274F4EB300F90AF9 /* FZZJ-GJPKZTFU.TTF */,
+				EFC8079C274F4EB300F90AF9 /* FZZJ-HMLSJW.TTF */,
+				EFC8079E274F4EB400F90AF9 /* FZZJ-QSCSJSJW.TTF */,
+				EFC8079D274F4EB300F90AF9 /* STFWXZKJW.TTF */,
 				67F48EFD225E2977006C683E /* bgAnimationStar.png */,
 				67F48F04225E2977006C683E /* bgAnimationStar1.png */,
 				67F48F02225E2977006C683E /* cycle1.png */,
@@ -294,7 +306,7 @@
 				TargetAttributes = {
 					BC6B62AC1FB9BFD5002AD625 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					BC6B62F61FBA94E0002AD625 = {
 						CreatedOnToolsVersion = 9.1;
@@ -327,11 +339,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F48F0B225E2977006C683E /* spark_cyan.png in Resources */,
+				EFC807A0274F4EB400F90AF9 /* FZZJ-HMLSJW.TTF in Resources */,
+				EFC807A1274F4EB400F90AF9 /* STFWXZKJW.TTF in Resources */,
 				67F48F0A225E2977006C683E /* spark_blue.png in Resources */,
 				67F48F0C225E2977006C683E /* spark_magenta.png in Resources */,
 				67F48F06225E2977006C683E /* star.png in Resources */,
 				67F48F10225E2977006C683E /* bgAnimationStar1.png in Resources */,
 				67F48F08225E2977006C683E /* TwinkleImage.png in Resources */,
+				EFC8079F274F4EB400F90AF9 /* FZZJ-GJPKZTFU.TTF in Resources */,
 				67F48F0E225E2977006C683E /* cycle1.png in Resources */,
 				67F48F0D225E2977006C683E /* spark_yellow.png in Resources */,
 				67F48F11225E2977006C683E /* spark.png in Resources */,
@@ -339,6 +354,7 @@
 				67F48F09225E2977006C683E /* bgAnimationStar.png in Resources */,
 				67F48F0F225E2977006C683E /* spark_green.png in Resources */,
 				67F48F07225E2977006C683E /* spark_red.png in Resources */,
+				EFC807A2274F4EB400F90AF9 /* FZZJ-QSCSJSJW.TTF in Resources */,
 				67F48F13225EFDFC006C683E /* FZXZTFW.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,13 +551,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3B89Q3LKCK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Sundial/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0.4;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sundial.weicheng;
@@ -555,13 +572,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3B89Q3LKCK;
+				DEVELOPMENT_TEAM = AQV97ZB6YM;
 				INFOPLIST_FILE = Sundial/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0.4;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sundial.weicheng;
 				PRODUCT_NAME = "$(TARGET_NAME)";

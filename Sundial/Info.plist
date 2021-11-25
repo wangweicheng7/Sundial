@@ -25,6 +25,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>FZXZTFW.TTF</string>
+		<string>FZZJ-HMLSJW.TTF</string>
+		<string>STFWXZKJW.TTF</string>
+		<string>FZZJ-QSCSJSJW.TTF</string>
+		<string>FZZJ-GJPKZTFU.TTF</string>
 	</array>
 </dict>
 </plist>

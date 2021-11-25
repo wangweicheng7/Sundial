@@ -12,7 +12,7 @@
 #import "Configuration.h"
 #import "NSImage+addition.h"
 
-#define FontFamilies @[@"Libian SC", @"FZXiaoZhuanTi-S13T"]
+#define FontFamilies @[@"FZZJ-HMLSJW--GB1-0", @"STFWXZKJW--GB1-0", @"FZZJ-QSCSJSJW", @"FZZJ-GJPKZTFU--GB1-0", @"FZXiaoZhuanTi-S13T"]
 
 @interface Preferences ()
 
@@ -80,18 +80,20 @@
 
 //    self.fontPopUpButton.title = self.fontPopUpButton.selectedItem.title;
     NSInteger index = self.fontPopUpButton.indexOfSelectedItem;
-    [Configuration shareInstance].fontFamily = FontFamilies[index];
-    self.previewText.font = [NSFont fontWithName:[Configuration shareInstance].fontFamily size:24];
-}
-/*
-- (void)pickFont:(id)sender {
+    if (index >= FontFamilies.count) {
+        [self openFontPanel];
+    }else {
+        [Configuration shareInstance].fontFamily = FontFamilies[index];
+        self.previewText.font = [NSFont fontWithName:[Configuration shareInstance].fontFamily size:24];
+    }
     
-    //不需要使用代理 NSFontManagerDelegate，代理也没有方法
+}
+
+- (void)openFontPanel {
     NSFontManager *fontManager = [NSFontManager sharedFontManager];
-    [fontManager setTarget:self];
-    [fontManager setAction:@selector(changeFont:)];
+    fontManager.target = self;
+    fontManager.action = @selector(changeFont:);
     [fontManager orderFrontFontPanel:self];
-    fontManager.enabled = YES;
 }
 
 - (void)changeFont:(NSFontManager *)sender {
@@ -105,7 +107,7 @@
     
     NSLog(@"fontName : %@ , familyName : %@",font.fontName, font.familyName);
 }
-*/
+
 - (void)selectColor:(NSPopUpButton *)sender {
 
     NSInteger index = self.pickerButton.indexOfSelectedItem;
@@ -163,7 +165,10 @@
 - (NSPopUpButton *)fontPopUpButton {
     if (!_fontPopUpButton) {
         _fontPopUpButton = [[NSPopUpButton alloc] initWithFrame:CGRectMake(50, 200, 100, 30) pullsDown:NO];
-        [_fontPopUpButton addItemWithTitle:@"隶书"];
+        [_fontPopUpButton addItemWithTitle:@"隶书-韩敏（简）"];
+        [_fontPopUpButton addItemWithTitle:@"楷书-王羲之（简）"];
+        [_fontPopUpButton addItemWithTitle:@"粗瘦金书-邱氏（简）"];
+        [_fontPopUpButton addItemWithTitle:@"酷篆體-顧建平（繁）"];
         [_fontPopUpButton addItemWithTitle:@"小篆"];
         [_fontPopUpButton setTarget:self];
         [_fontPopUpButton setAction:@selector(selectFont:)];
