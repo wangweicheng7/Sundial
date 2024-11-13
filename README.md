@@ -18,6 +18,6 @@ Or
 2. Unzip Sundial.saver.zip
 3. Double click Sundial.saver
 
-## E.g
+## E.g.
 
 ![](./Example/example.png)
